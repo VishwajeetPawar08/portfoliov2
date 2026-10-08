@@ -1,0 +1,164 @@
+/* src/styles/Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: rgba(240, 244, 248, 0.98); Near opaque light background */
+  background-color: var(--bg-light);
+
+  box-shadow: 0 4px 15px var(--shadow-light); /* More noticeable shadow */
+  padding: 1.25rem 3rem; /* Increased padding */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  color: var(--accent-primary); /* Use accent for title */
+  font-family: 'Playfair Display', serif;
+  font-size: 2em; /* Larger title */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem; /* Wider gap between links */
+}
+
+.nav-link a {
+  color: var(--text-dark);
+  font-weight: 500; /* Slightly lighter weight */
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Slightly below text */
+  left: 0;
+  width: 0;
+  height: 3px; /* Thicker underline */
+  background-color: var(--accent-primary);
+  transition: width 0.3s ease-out;
+}
+
+.nav-link a:hover {
+  color: var(--accent-primary);
+}
+
+.nav-link a:hover::after,
+.nav-link a.active::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px; /* Slightly larger */
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px; /* Same thickness */
+  background-color: var(--text-dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg); /* Adjusted for new size */
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg); /* Adjusted for new size */
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-secondary); /* Use secondary background */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav-overlay.open {
+  display: flex;
+  transform: translateX(0);
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Wider gap */
+  text-align: center;
+}
+
+.mobile-nav-link a {
+  color: var(--text-dark);
+  font-size: 2em; /* Larger font size for mobile links */
+  font-weight: 600;
+  padding: 0.75rem 0;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-link a:hover {
+  color: var(--accent-primary);
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+.theme-toggle-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--bg-secondary);
+}

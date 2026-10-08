@@ -1,0 +1,133 @@
+/* src/styles/index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  /* NEW Custom Color Palette */
+  --bg-light: #F0F4F8;
+  --bg-secondary: #DAE1E7;
+  --accent-primary: #5697f3;
+  --text-dark: #053c72;
+  --back-dark: #053c72;
+  --text-secondary: #7F8C8D;
+  --text-white: #FFFFFF;
+  --border-color: #BCCCDC; /* A subtle border color */
+  --shadow-light: rgba(0, 0, 0, 0.08); /* Lighter shadow */
+  --shadow-medium: rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+
+
+  /* ShadCN UI Base Variables (mapped to new palette) */
+  --background: var(--bg-light);
+  --foreground: var(--text-dark);
+  --card: var(--bg-secondary);
+  --card-foreground: var(--text-dark);
+  --popover: var(--bg-light);
+  --popover-foreground: var(--text-dark);
+  --primary: var(--accent-primary);
+  --primary-foreground: var(--text-white);
+  --secondary: var(--bg-secondary);
+  --secondary-foreground: var(--text-dark);
+  --muted: var(--DAE1E7); /* Lighter grey for muted text/elements */
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--accent-primary);
+  --accent-foreground: var(--text-white);
+  --destructive: #EF4444; /* Keep red for errors */
+  --destructive-foreground: var(--text-white);
+  --border: var(--border-color);
+  --input: var(--border-color);
+  --ring: var(--accent-primary);
+  --radius: 0.75rem; /* Slightly larger border radius for a softer look */
+}
+
+/* Base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Modern, clean sans-serif */
+  color: var(--text-dark);
+  background-color: var(--background);
+  line-height: 1.7; /* Slightly increased line-height for readability */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-dark); /* Darken on hover */
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif; /* Elegant serif for headings */
+  color: var(--text-dark);
+  margin-bottom: 0.8em;
+  font-weight: 700;
+}
+
+h1 { font-size: 3.8em; line-height: 1.1; }
+h2 { font-size: 2.8em; line-height: 1.2; }
+h3 { font-size: 1.8em; line-height: 1.3; }
+h4 { font-size: 1.3em; line-height: 1.4; }
+
+p {
+  margin-bottom: 1em;
+  color: var(--text-dark);
+}
+
+/* Custom utility classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mb-2 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 3rem; }
+
+
+/* Styles for scroll-linked animations to prevent initial flash or jumps */
+/* Framer Motion will handle initial opacity and transform, so no need for a global CSS reset here */
+
+/* === Dark Mode Overrides === */
+[data-theme='dark'] {
+  --bg-light: #121212;
+  --bg-secondary: #1e1e1e;
+  --accent-primary: #50a1f7;
+  --text-dark: #fefefe;
+  --back-dark: #50a1f7;
+  --text-secondary: #ffffff;
+  --border-color: #333333;
+  --shadow-light: rgba(255, 255, 255, 0.05);
+  --shadow-medium: rgba(255, 255, 255, 0.1);
+
+  --background: var(--bg-light);
+  --foreground: var(--text-dark);
+  --card: var(--bg-secondary);
+  --card-foreground: var(--text-dark);
+  --popover: var(--bg-light);
+  --popover-foreground: var(--text-dark);
+  --primary: var(--accent-primary);
+  --primary-foreground: var(--text-dark);
+  --secondary: var(--bg-secondary);
+  --secondary-foreground: var(--text-dark);
+  --muted: var(--bg-secondary);
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--accent-primary);
+  --accent-foreground: var(--text-dark);
+  --destructive: #f87171;
+  --destructive-foreground: var(--text-dark);
+  --border: var(--border-color);
+  --input: var(--border-color);
+  --ring: var(--accent-primary);
+}
