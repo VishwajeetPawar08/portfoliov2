@@ -96,7 +96,7 @@ function App() {
           </button>
           <div className="nav-links">
             {['work', 'experience', 'skills', 'education', 'contact'].map((item) => (
-              <button key={item} onClick={() => scrollTo(item)}>{item}</button>
+              <button key={item} onClick={() => scrollTo(item)} style={{fontSize: "13px"}}>{item}</button>
             ))}
           </div>
           <div className="nav-actions">
@@ -111,9 +111,9 @@ function App() {
         <section id="home" className="hero container">
           <div className="hero-copy">
             <motion.div initial="hidden" animate="visible" variants={reveal} className="eyebrow"><span className="status-dot" /> Available for opportunities</motion.div>
-            <motion.h1 initial="hidden" animate="visible" variants={reveal} transition={{ delay: 0.08 }}>
+            <motion.h2 initial="hidden" animate="visible" variants={reveal} transition={{ delay: 0.08 }}>
               Data Engineer building <em>production-ready</em> data & AI systems.
-            </motion.h1>
+            </motion.h2>
             <motion.p initial="hidden" animate="visible" variants={reveal} transition={{ delay: 0.16 }}>
               I design scalable pipelines, distributed data workflows and practical AI applications using Python, Spark, Azure, Databricks and modern ML techniques.
             </motion.p>
@@ -146,14 +146,14 @@ function App() {
         <section id="work" className="section container">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: .2 }} variants={reveal} className="section-heading">
             <span className="section-kicker">01 / SELECTED WORK</span>
-            <h2>Case studies, not just project cards.</h2>
+            <h3>Case studies, not just project cards.</h3>
             <p>Three projects that show how I approach data engineering, distributed processing and applied AI.</p>
           </motion.div>
           <div className="project-showcase">
             <div className="project-list">
               {featuredProjects.map((project, index) => (
                 <motion.button key={project.id} className={`project-tab ${activeProject === index ? 'active' : ''}`} onClick={() => setActiveProject(index)} whileHover={{ x: 5 }}>
-                  <span className="project-number">0{index + 1}</span>
+                  <span className="project-number reg-text">0{index + 1}</span>
                   <span><strong>{project.name}</strong><small>{index === 0 ? 'Azure · PySpark · Databricks' : index === 1 ? 'Spark · Scala · Databricks' : 'ML · LLMs · GNN'}</small></span>
                   <ArrowUpRight size={18} />
                 </motion.button>
@@ -173,7 +173,7 @@ function App() {
               </div>
             </motion.article>
           </div>
-          <div className="mini-projects">
+          <div className="mini-projects more-work">
             <span>More work</span>
             {projectData.slice(3).map((p) => <a key={p.id} href={p.link} target="_blank" rel="noreferrer">{p.name} <ArrowUpRight size={13} /></a>)}
           </div>
@@ -183,14 +183,14 @@ function App() {
           <div className="container">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: .2 }} variants={reveal} className="section-heading split">
               <div><span className="section-kicker">02 / EXPERIENCE</span><h2>Built in real teams.</h2></div>
-              <p>Professional experience across data engineering, ETL, cloud platforms and analytics.</p>
+              <p className='reg-text'>Professional experience across data engineering, ETL, cloud platforms and analytics.</p>
             </motion.div>
             <div className="timeline">
               {experienceData.map((exp, index) => (
-                <motion.article key={exp.id} initial="hidden" whileInView="visible" viewport={{ once: true, amount: .15 }} variants={reveal} className="timeline-item">
-                  <div className="timeline-index">0{index + 1}</div>
-                  <div className="timeline-main">
-                    <div className="timeline-top"><div><h3>{exp.company}</h3><span>{exp.roles}</span></div><time>{exp.duration}</time></div>
+                <motion.article key={exp.id} initial="hidden" whileInView="visible" viewport={{ once: true, amount: .15 }} variants={reveal} className="timeline-item reg-text">
+                  <div className="timeline-index reg-text">0{index + 1}</div>
+                  <div className="timeline-main reg-text">
+                    <div className="timeline-top reg-text"><div><h3>{exp.company}</h3><span>{exp.roles}</span></div><p><time style={{ fontSize: "15px" }}>{exp.duration}</time></p></div>
                     <ul>{exp.description.map((d, i) => <li key={i}>{d}</li>)}</ul>
                   </div>
                 </motion.article>
@@ -213,9 +213,9 @@ function App() {
           <div className="container">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: .2 }} variants={reveal} className="section-heading split"><div><span className="section-kicker">04 / EDUCATION</span><h2>Foundation + continuous learning.</h2></div><p>Academic background supporting a career across software, data and AI.</p></motion.div>
             <div className="education-grid">
-              {educationData.map((edu) => <motion.article key={edu.id} whileHover={{ y: -5 }}><div className="edu-icon"><GraduationCap size={18} /></div><div><span>{edu.duration}</span><h3>{edu.degree}</h3><p>{edu.school}</p><strong>{edu.marks}</strong></div></motion.article>)}
+              {educationData.map((edu) => <motion.article key={edu.id} whileHover={{ y: -5 }}><div className="edu-icon"><GraduationCap size={18} /></div><div><span style={{ fontSize: "13px" }}>{edu.duration}</span><h3>{edu.degree}</h3><p>{edu.school}</p><strong>{edu.marks}</strong></div></motion.article>)}
             </div>
-            <div className="cert-strip"><span>CERTIFICATIONS</span><div>{certificateData.slice(0, 6).map(c => <span key={c.id}>{c.name}</span>)}</div></div>
+            <div className="cert-strip reg-text"><span style={{ fontSize: "15px" }}>CERTIFICATIONS</span><div>{certificateData.slice(0, 6).map(c => <span key={c.id}>{c.name}</span>)}</div></div>
           </div>
         </section>
 

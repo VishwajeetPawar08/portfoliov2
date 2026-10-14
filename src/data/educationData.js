@@ -4,7 +4,7 @@ export const educationData = [
     id: 1,
     school: "MTU Cork",
     degree: "MSc in Artificial Intelligence",
-    marks: "ongoing",
+    marks: "First Class Honours",
     duration: "2025 - 2026",
   },
   {

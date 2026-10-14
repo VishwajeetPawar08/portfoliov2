@@ -7,7 +7,7 @@
   --bg-light: #F0F4F8;
   --bg-secondary: #DAE1E7;
   --accent-primary: #5697f3;
-  --text-dark: #053c72;
+  --text-dark: #0a66c3;
   --back-dark: #053c72;
   --text-secondary: #7F8C8D;
   --text-white: #FFFFFF;
@@ -94,8 +94,7 @@ p {
 .mb-2 { margin-bottom: 0.75rem; }
 .mb-4 { margin-bottom: 1.5rem; }
 .mb-8 { margin-bottom: 3rem; }
-
-
+.section-kicker, .project-number, .art-label, .more-work, .reg-text {font-size: 15px;}
 /* Styles for scroll-linked animations to prevent initial flash or jumps */
 /* Framer Motion will handle initial opacity and transform, so no need for a global CSS reset here */
 
