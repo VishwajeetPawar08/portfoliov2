@@ -9,3 +9,8 @@ npm run build
 
 # Preview production build
 npm run preview
+
+
+surge dist/
+
+ surge --domain https://vishwajeetpawarportfolio.surge.sh/
