@@ -10,14 +10,14 @@ import { experienceData } from './data/experienceData';
 import { educationData } from './data/educationData';
 import { skillsData } from './data/skillsData';
 import { certificateData } from './data/certificateData';
-import resumePdf from './assets/VishwajeetVijay_Pawar_+353894631972 FH.pdf';
+import resumePdf from './assets/Vishwajeet_Pawar_Data_Engineer_CV.pdf';
 import './styles/App.css';
 
 const linkedin = 'https://www.linkedin.com/in/vishwajeet-pawar-82b9b0283/';
 const github = 'https://github.com/VishwajeetPawar08';
 const email = 'mailto:vpawar6254@gmail.com';
 const whatsapp = 'https://wa.me/917447454264';
-const resumeFolder = 'https://drive.google.com/drive/folders/1qSf9z4C6ridY3xaFcwSrkKEc8suYHPwC';
+// const resumeFolder = 'https://drive.google.com/drive/folders/1qSf9z4C6ridY3xaFcwSrkKEc8suYHPwC';
 
 const reveal = {
   hidden: { opacity: 0, y: 28 },
@@ -96,7 +96,7 @@ function App() {
           </button>
           <div className="nav-links">
             {['work', 'experience', 'skills', 'education', 'contact'].map((item) => (
-              <button key={item} onClick={() => scrollTo(item)} style={{fontSize: "13px"}}>{item}</button>
+              <button key={item} onClick={() => scrollTo(item)} style={{fontSize: "15px"}}>{item}</button>
             ))}
           </div>
           <div className="nav-actions">
@@ -110,7 +110,7 @@ function App() {
       <main>
         <section id="home" className="hero container">
           <div className="hero-copy">
-            <motion.div initial="hidden" animate="visible" variants={reveal} className="eyebrow"><span className="status-dot" /> Available for opportunities</motion.div>
+            <motion.div initial="hidden" animate="visible" variants={reveal} className="eyebrow"><span className="status-dot"/><p style={{fontSize: "13px"}}>Available for opportunities</p></motion.div>
             <motion.h2 initial="hidden" animate="visible" variants={reveal} transition={{ delay: 0.08 }}>
               Data Engineer building <em>production-ready</em> data & AI systems.
             </motion.h2>
@@ -223,7 +223,7 @@ function App() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: .3 }} variants={reveal} className="contact-card">
             <div><span className="section-kicker">05 / LET'S TALK</span><h2>Have a data problem worth solving?</h2><p>I'm open to conversations around Data Engineering, AI/ML and software engineering opportunities.</p></div>
             <div className="contact-actions"><a href={email} className="primary-btn">Email me <Mail size={16} /></a><a href={linkedin} target="_blank" rel="noreferrer" className="secondary-btn">LinkedIn <Linkedin size={16} /></a></div>
-            <div className="contact-links"><a href={github} target="_blank" rel="noreferrer"><Github size={16} /> GitHub</a><a href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp</a><a href={resumeFolder} target="_blank" rel="noreferrer"><Download size={16} /> Resume folder</a></div>
+            <div className="contact-links"><a href={github} target="_blank" rel="noreferrer"><Github size={16} /> GitHub</a><a href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp</a><a href={resumePdf} target="_blank" rel="noreferrer"><Download size={16} />Download Resume</a></div>
           </motion.div>
         </section>
       </main>
