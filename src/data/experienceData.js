@@ -17,6 +17,18 @@ export const experienceData = [
   },
   {
     id: 2,
+    company: "OOMSYS Technologies",
+    logo: ustLogo, // Path to your logo in public folder
+    roles: "Data Engineer 1",
+    duration: "January 2023 - May 2024",
+    description: [
+      "Developed Azure Data Factory pipelines for multi-source data integration.",
+      "Optimized PySpark jobs and SQL queries in Azure Databricks to improve processing efficiency.",
+      "Reduced execution time by 18% for faster reporting."
+    ],
+  },
+  {
+    id: 3,
     company: "KWYK PVT LTD",
     logo: kwykLogo, // Path to your logo in public folder
     roles: "Data Analyst Intern",

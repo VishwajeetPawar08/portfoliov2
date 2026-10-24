@@ -119,7 +119,7 @@ function App() {
             </motion.p>
             <motion.div initial="hidden" animate="visible" variants={reveal} transition={{ delay: 0.24 }} className="hero-actions">
               <button className="primary-btn" onClick={() => scrollTo('work')}>View selected work <ArrowUpRight size={17} /></button>
-              <a className="secondary-btn" href={`https://drive.google.com/file/d/1EAtrY-v5dNlAqxFLvH53L27aR3UwbL_j/view?usp=drive_link`} target="_blank" rel="noopener noreferrer">Resume <Download size={16} /></a>
+              <a className="secondary-btn" href={`https://drive.google.com/file/d/1SBCLT1UUBFlqr_AisE9WhI3-54YZGNF7/view`} target="_blank" rel="noopener noreferrer">Resume <Download size={16} /></a>
             </motion.div>
             <motion.div initial="hidden" animate="visible" variants={reveal} transition={{ delay: 0.32 }} className="hero-meta">
               <span><MapPin size={14} /> Cork, Ireland</span><span>•</span><span>Python · PySpark · Databricks · Azure · ML</span>
@@ -223,7 +223,7 @@ function App() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: .3 }} variants={reveal} className="contact-card">
             <div><span className="section-kicker">05 / LET'S TALK</span><h2>Have a data problem worth solving?</h2><p>I'm open to conversations around Data Engineering, AI/ML and software engineering opportunities.</p></div>
             <div className="contact-actions"><a href={email} className="primary-btn">Email me <Mail size={16} /></a><a href={linkedin} target="_blank" rel="noreferrer" className="secondary-btn">LinkedIn <Linkedin size={16} /></a></div>
-            <div className="contact-links"><a href={github} target="_blank" rel="noreferrer"><Github size={16} /> GitHub</a><a href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp</a><a href={`https://drive.google.com/file/d/1EAtrY-v5dNlAqxFLvH53L27aR3UwbL_j/view?usp=drive_link`} target="_blank" rel="noreferrer"><Download size={16} />Download Resume</a></div>
+            <div className="contact-links"><a href={github} target="_blank" rel="noreferrer"><Github size={16} /> GitHub</a><a href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp</a><a href={`https://drive.google.com/file/d/1SBCLT1UUBFlqr_AisE9WhI3-54YZGNF7/view`} target="_blank" rel="noreferrer"><Download size={16} />Download Resume</a></div>
           </motion.div>
         </section>
       </main>
